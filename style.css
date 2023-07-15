@@ -1,0 +1,321 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+}
+
+html {
+    --cor-primaria: #000000e3;
+    --cor-secundaria: hsl(139, 43%, 13%);
+    --cor-terciaria: hsla(139, 42%, 13%, 0.5);
+    --cor-cards: hsla(139, 42%, 13%, 0.274);
+    --cor-texto: #00882b;
+    --cor-titulo-aside: white;
+    --cor-link: #00882b;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--cor-secundaria);
+    background-image: url("https://media1.giphy.com/media/WoD6JZnwap6s8/giphy.gif?cid=ecf05e47pr0ia0rdmx7wn9o41brb8ds1y5useucx8phdr4s2&ep=v1_gifs_search&rid=giphy.gif&ct=g");
+    background-size: contain;
+    min-height: 100vh;
+}
+
+.container-principal {
+    display: flex;
+    flex-direction: row;
+    color: var(--cor-texto);
+    max-height: 100vh;
+    max-width: 100vw;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 15%;
+    background-color: var(--cor-primaria);
+    align-items: center;
+    border: 5px solid var(--cor-terciaria);
+}
+img.foto-perfil {
+    margin: 5%;
+    width: 80%;
+    border: 8px solid var(--cor-terciaria);
+    display: inline-block;
+    border-radius: 50%;
+}
+h2.meu-nome {
+    background-color: var(--cor-terciaria);
+    color: var(--cor-titulo-aside);
+    font-size: 3dvh;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5% 0;
+    text-align: center;
+}
+ul.aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+aside h3 {
+    max-width: 75%;
+    font-size: 2.5dvh;
+    color: var(--cor-titulo-aside);
+    margin: 25px 0px 15px 0px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: var(--cor-terciaria);
+}
+
+i {
+    margin: 5px;
+}
+
+li.itens {
+    color: var(--cor-texto);
+    margin: 4px;
+    font-size: 2dvh;
+}
+li.itens a {
+    transition: 0.3s;
+    padding: 5px;
+    border-radius: 10px;
+}
+li.itens a:link,
+li.itens a:visited {
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 600;
+    color: var(--cor-texto);
+}
+li.itens a:hover {
+    background-color: black;
+    color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 0 0 0.5%;
+    min-height: 100vh;
+    gap: 10px;
+}
+main h2 {
+    font-size: 4.2dvh;
+    margin-bottom: 16px;
+}
+main p {
+    font-size: 2.2dvh;
+}
+.sobre-mim,
+.tecnologia,
+.network {
+    background-color: var(--cor-primaria);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 100%;
+    text-align: justify;
+    border: var(--cor-terciaria) solid 5px;
+}
+.sobre-mim,
+.tecnologia {
+    height: 30%;
+    min-height: max-content;
+    justify-content: center;
+}
+.network {
+    min-height: 40%;
+}
+
+.sobre-mim ul {
+    list-style-type: none;
+    padding: 0.5%;
+    font-style: normal;
+    font-size: 2dvh;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.sobre-mim ul a {
+    color: var(--cor-link);
+    text-decoration: none;
+}
+.sobre-mim ul a:hover {
+    text-decoration: underline;
+}
+
+.cards {
+    display: flex;
+    height: 80%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.card {
+    width: 15vw;
+    height: 25vh;
+    border-radius: 30px;
+    border: var(--cor-terciaria) solid 5px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--cor-cards);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.card h3 {
+    color: var(--cor-texto);
+    background-color: var(--cor-primaria);
+    width: 100%;
+    font-size: 2.8dvh;
+    text-align: center;
+    border-radius: 28px 28px 0 0;
+    padding: 2px;
+}
+.card img {
+    width: 40%;
+    justify-self: end;
+}
+
+.card a {
+    color: var(--cor-link);
+    text-decoration: none;
+    text-align: center;
+    font-size: 2dvh;
+    transition: 0.5s;
+    padding: 2px;
+    border-radius: 10px;
+    background-color: var(--cor-primaria);
+}
+.card a:hover {
+    background-color: var(--cor-terciaria);
+    color: white;
+    font-size: 2.2dvh;
+}
+
+.botao-whatsapp {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 15px;
+    right: 15px;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 1px 1px 2px #888;
+}
+
+@media screen and (max-width: 1023px) /* Se a largura é de até 1023px || Tablet e smartphone */ {
+    .container-principal {
+        flex-direction: column;
+    }
+    aside {
+        width: 100vw;
+        max-width: none;
+        min-height: max-content;
+        border: 0;
+        display: flex;
+    }
+    img.foto-perfil {
+        width: 30%;
+        border: 5px solid var(--cor-terciaria);
+    }
+    h2.meu-nome {
+        background-color: var(--cor-terciaria);
+        font-size: 3dvh;
+        border-radius: 10px;
+        padding: 5px;
+        margin: 0;
+        text-align: center;
+    }
+    ul.aside {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        list-style-type: none;
+        padding: 0;
+    }
+
+    aside h3 {
+        max-width: 75%;
+        font-size: 1.25rem;
+        margin: 25px 0px 15px 0px;
+        text-align: center;
+        padding: 5px;
+        border-radius: 10px;
+        background-color: var(--cor-terciaria);
+    }
+
+    li.itens {
+        font-size: 1rem;
+    }
+    li.itens a {
+        transition: 0.3s;
+        padding: 5px;
+        border-radius: 10px;
+    }
+    li.itens a:link,
+    li.itens a:visited {
+        text-decoration: none;
+        font-size: 1em;
+        font-weight: 600;
+    }
+    li.itens a:hover {
+        background-color: var(--cor-terciaria);
+    }
+    main {
+        width: 100%;
+        padding: 0 0 0 0;
+        min-height: max-content;
+        gap: 0px;
+    }
+    .sobre-mim,
+    .tecnologia,
+    .network {
+        border: var(--cor-terciaria) solid 0px;
+    }
+    .sobre-mim ul {
+        font-size: 1.2rem;
+        flex-wrap: wrap;
+    }
+    .network {
+        min-height: none;
+    }
+    main h2 {
+        font-size: 2rem;
+    }
+    main p {
+        font-size: 1.2rem;
+    }
+    .card {
+        width: 80vw;
+        height: 32vh;
+        border: var(--cor-terciaria) solid 5px;
+    }
+    .card img {
+        width: 30dvw;
+        max-width: fit-content;
+        max-height: 18vh;
+        justify-self: end;
+    }
+    .card h3 {
+        font-size: 1.8rem;
+    }
+
+    .card a {
+        font-size: 1.2rem;
+    }
+}
