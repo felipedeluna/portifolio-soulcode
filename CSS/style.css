@@ -276,6 +276,7 @@ main p {
     li.itens a:hover {
         background-color: var(--cor-terciaria);
     }
+    
     main {
         width: 100%;
         padding: 0 0 0 0;
